@@ -1,0 +1,14 @@
+.img-background-register-login {
+  background: url('https://images7.alphacoders.com/592/592678.jpg');
+}
+
+.img-background-register-login form input {
+  background: none;
+  border: 1px solid #5ee892;
+}
+
+@media (max-width: 500px) {
+  .img-background-register-login form {
+    width: 90%;
+  }
+}

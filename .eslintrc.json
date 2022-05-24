@@ -2,12 +2,13 @@
     "env": {
         "browser": true,
         "es2021": true
+        // "jest/globals": true
     },
     "extends": [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
         "standard",
-        "eslint-config-prettier"
+        "eslint-config-prettier"        
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -17,11 +18,17 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
-    ],
+        "react"        
+    ],        
     "rules": {
         "no-unused-vars": "warn",
-        "react/prop-types": "warn",
-        "space-before-function-paren": "off"
+        "react/prop-types": "off",
+        "space-before-function-paren": "error",
+        "space-in-parens": "error",
+        "no-spaced-func": "error",
+        "camelcase": "off",
+        "no-empty-function": "error",
+        "switch-colon-spacing": "error",
+        "comma-spacing": "error"        
     }
 }
