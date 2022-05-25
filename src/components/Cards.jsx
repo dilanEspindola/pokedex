@@ -7,6 +7,7 @@ export const Cards = ({ pokemon }) => {
   const type = types.map(type => type.type.name);
   return (
     <div
+      role='cards'
       className={
         type[0] === 'grass'
           ? 'bg-green-500 rounded-lg p-5 flex flex-col justify-between items-center gap-2 cursor-pointer'

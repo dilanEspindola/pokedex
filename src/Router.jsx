@@ -3,7 +3,7 @@ import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import { Pokemon } from './pages/pokemon/pokemon';
+import { Pokemon } from './pages/pokemon/Pokemon';
 
 // protectedRoute
 import { ProtectedRoutes } from './components/ProtectedRoutes';
