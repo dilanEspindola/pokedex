@@ -4,6 +4,10 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  signInWithPopup,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  signOut,
 } from 'firebase/auth';
 
 const contextAuth = createContext();
@@ -18,8 +22,22 @@ export const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const loginGoogle = () => {
+    const googleProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, googleProvider);
+  };
+
   const loginWithEmailAndPassword = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
+  };
+
+  const loginFacebook = () => {
+    const facebookProvider = new FacebookAuthProvider();
+    return signInWithPopup(auth, facebookProvider);
+  };
+
+  const cerrarSesion = async () => {
+    await signOut(auth);
   };
 
   useEffect(() => {
@@ -34,6 +52,9 @@ export const AuthProvider = ({ children }) => {
       value={{
         createUser,
         loginWithEmailAndPassword,
+        loginGoogle,
+        loginFacebook,
+        cerrarSesion,
         userState,
         loading,
       }}

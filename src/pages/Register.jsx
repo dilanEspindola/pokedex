@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 import '../styles/imgBackgroundRegisterLogin.css';
 
 const Register = () => {
-  const { createUser } = useAuth();
+  const { createUser, loginGoogle, loginFacebook } = useAuth();
   const navigate = useNavigate();
 
   const { handleChange, dataForm } = useForm({
@@ -61,8 +61,26 @@ const Register = () => {
     }
   };
 
+  const signInWithGoogle = async () => {
+    try {
+      await loginGoogle();
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const signInWithFacebook = async () => {
+    try {
+      await loginFacebook();
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <div className='h-screen flex items-center justify-center img-background-register-login'>
+    <div className='h-screen flex flex-col items-center justify-center img-background-register-login'>
       <form
         onSubmit={handleSubmit}
         className='flex flex-col gap-3 w-3/12 py-6 px-3 bg-gradient-to-r from-green-800
@@ -95,6 +113,14 @@ const Register = () => {
           </Link>
         </div>
       </form>
+      <div className='flex gap-5 mt-5'>
+        <button className='bg-white p-2' onClick={signInWithGoogle}>
+          Login con Google
+        </button>
+        <button className='bg-blue-500 p-2' onClick={signInWithFacebook}>
+          Login con Facebook
+        </button>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,9 @@ import { getPokemons } from '../redux/thunks/getPokemonThunk';
 import { Spinner } from '../components/Spinner';
 import { Cards } from '../components/Cards';
 import { useSearch } from '../hooks/useSearch';
+import { AddPokemon } from '../components/AddPokemon';
+import { Logout } from '../components/Logout';
+// import '../services/getPokemon';
 
 const Home = () => {
   const { setSearch, search, pokemonSearch } = useSearch();
@@ -29,6 +32,7 @@ const Home = () => {
           placeholder='busca tu pokemon favorito...'
           onChange={handleSearch}
         />
+        <AddPokemon />
       </div>
       {status.status === 'pending' ? (
         <Spinner />
@@ -45,6 +49,7 @@ const Home = () => {
           </div>
         )
       )}
+      <Logout />
     </section>
   );
 };
