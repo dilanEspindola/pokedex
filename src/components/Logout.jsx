@@ -4,7 +4,7 @@ export const Logout = () => {
   const { cerrarSesion } = useAuth();
   return (
     <div
-      className='fixed bottom-3 w-10 h-10 bg-black cursor-pointer'
+      className='fixed bottom-5 right-5 w-10 h-10 bg-black cursor-pointer'
       onClick={() => cerrarSesion()}
     >
       <svg

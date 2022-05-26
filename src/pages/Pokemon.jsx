@@ -5,6 +5,7 @@ import { getPokemons } from '../redux/thunks/getPokemonThunk';
 import { Spinner } from '../components/Spinner';
 import { Evolutions } from '../components/Evolutions';
 import { ModalEdit } from '../components/ModalEdit';
+import { motion } from 'framer-motion';
 
 export const Pokemon = () => {
   const [isActive, setIsActive] = useState(false);
@@ -30,7 +31,12 @@ export const Pokemon = () => {
   const { id, name, types, sprites, evolutions } = getPokemon;
 
   return (
-    <div className='p-5'>
+    <motion.div
+      className='p-5'
+      initial={{ transform: 'scale(0)' }}
+      animate={{ transform: 'scale(1)' }}
+      exit={{ transform: 'scale(0)', transition: { duration: 1 } }}
+    >
       <div
         className={
           types[0].type
@@ -95,6 +101,6 @@ export const Pokemon = () => {
       {isActive && (
         <ModalEdit showModal={isActive} setStateModal={setIsActive} pokemon={getPokemon} />
       )}
-    </div>
+    </motion.div>
   );
 };

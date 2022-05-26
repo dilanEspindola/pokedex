@@ -6,7 +6,8 @@ import { Cards } from '../components/Cards';
 import { useSearch } from '../hooks/useSearch';
 import { AddPokemon } from '../components/AddPokemon';
 import { Logout } from '../components/Logout';
-// import '../services/getPokemon';
+
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const { setSearch, search, pokemonSearch } = useSearch();
@@ -23,7 +24,12 @@ const Home = () => {
   };
 
   return (
-    <section className='p-5'>
+    <motion.section
+      className='p-5'
+      initial={{ transform: 'scale(0)' }}
+      animate={{ transform: 'scale(1)' }}
+      exit={{ transform: 'scale(0)', transition: { duration: 1 } }}
+    >
       <div className='flex justify-center mb-10 '>
         <input
           type='search'
@@ -50,7 +56,7 @@ const Home = () => {
         )
       )}
       <Logout />
-    </section>
+    </motion.section>
   );
 };
 
