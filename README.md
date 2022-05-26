@@ -11,9 +11,9 @@ Debes tener los siguientes frameworks
 ### Instalaciones
 
 
-Clona el repositorio: git clone 
+Clona el repositorio: 
 ```
-https://github.com/dilanEspindola/pokedex
+git clone https://github.com/dilanEspindola/pokedex
 ```
 instala todas las dependicias con 
 ```
