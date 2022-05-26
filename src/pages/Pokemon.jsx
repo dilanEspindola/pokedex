@@ -33,9 +33,9 @@ export const Pokemon = () => {
   return (
     <motion.div
       className='p-5'
-      initial={{ transform: 'scale(0)' }}
-      animate={{ transform: 'scale(1)' }}
-      exit={{ transform: 'scale(0)', transition: { duration: 1 } }}
+      initial={{ transform: 'translateX(100%)' }}
+      animate={{ transform: 'translateX(0%)' }}
+      exit={{ transform: 'translateX(100%)', transition: { duration: 0.6 } }}
     >
       <div
         className={
