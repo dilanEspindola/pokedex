@@ -5,8 +5,8 @@ A simple pokedex web applicacition. it gets data from firebase and displays a li
 
 Debes tener los siguientes frameworks
 
-* [ReactJs](https://reactjs.org/docs/getting-started.html) - El framework web usado
-* [Nodejs](https://nodejs.org/en/) - El framework del backend usado
+* [ReactJs](https://reactjs.org/docs/getting-started.html) 
+* [Nodejs](https://nodejs.org/en/)
 
 ### Instalaciones
 
