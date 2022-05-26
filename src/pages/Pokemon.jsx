@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPokemons } from '../../redux/thunks/getPokemonThunk';
-import { Spinner } from '../../components/Spinner';
-import { Evolutions } from '../../components/Evolutions';
-import { ModalEdit } from '../../components/ModalEdit';
+import { getPokemons } from '../redux/thunks/getPokemonThunk';
+import { Spinner } from '../components/Spinner';
+import { Evolutions } from '../components/Evolutions';
+import { ModalEdit } from '../components/ModalEdit';
 
 export const Pokemon = () => {
   const [isActive, setIsActive] = useState(false);

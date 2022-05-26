@@ -61,7 +61,7 @@ export const Cards = ({ pokemon }) => {
         src={sprites.other ? sprites.other.dream_world.front_default : sprites}
         alt=''
         className='cursor-pointer'
-        onClick={() => navigate(`/pokemon/${id}`)}
+        onClick={() => navigate(`/${id}`)}
       />
       <div className=''>
         <p className='text-center text-white'>{id}</p>

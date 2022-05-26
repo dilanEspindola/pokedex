@@ -3,7 +3,7 @@ import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import { Pokemon } from './pages/pokemon/Pokemon';
+import { Pokemon } from './pages/Pokemon';
 
 // protectedRoute
 import { ProtectedRoutes } from './components/ProtectedRoutes';
@@ -22,7 +22,7 @@ const Router = () => {
             }
           />
           <Route
-            path='/pokemon/:pokemon'
+            path='/:pokemon'
             element={
               <ProtectedRoutes>
                 <Pokemon />
