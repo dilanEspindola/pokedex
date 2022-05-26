@@ -23,3 +23,10 @@ arranca el proyecto con
 ```
 npm start
 ```
+## Construido con
+
+* [ReactJs](https://reactjs.org/docs/getting-started.html) - El framework web usado
+* [Firebase](https://firebase.google.com/) - servicio en la nube usado
+* [Redux](https://redux.js.org/) - libreria para administrar estados
+* [TailwindCSS](https://tailwindcss.com/) - framework css usado
+* [Eslint](https://tailwindcss.com/) - Herramienta para detectar errores de sintaxis, tener codigo limpiio, etc.. 
