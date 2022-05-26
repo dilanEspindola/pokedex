@@ -10,8 +10,16 @@ Debes tener los siguientes frameworks
 
 ### Instalaciones
 
+
+Clona el repositorio: git clone 
 ```
-Clona el repositorio: git clone https://github.com/dilanEspindola/pokedex
-instala todas las dependicias con: npm install
-arranca el proyecto con: npm start
+https://github.com/dilanEspindola/pokedex
+```
+instala todas las dependicias con 
+```
+npm install
+```
+arranca el proyecto con 
+```
+npm start
 ```
